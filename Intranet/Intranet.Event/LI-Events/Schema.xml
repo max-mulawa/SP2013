@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="LI-Events" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/LI-Events" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE">
+  <MetaData>
+    <ContentTypes>
+      
+      
+    <ContentType ID="0x0100df52e824c3f142269b4679c975d477b8" Name="ListFieldsContentType"><FieldRefs><FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" /><FieldRef ID="{64cd368d-2f95-4bfc-a1f9-8d4324ecb007}" Name="StartDate" /><FieldRef ID="{8A121252-85A9-443d-8217-A1B57020FADF}" Name="_EndDate" /><FieldRef ID="{1fb2630a-be89-41ab-963d-8fd54c0945d8}" Name="EventDescription" /></FieldRefs></ContentType><ContentType ID="0x0100C17AC77914394C08A1FE602606BDA880" Name="CT-Event" Group="Intranet" Description="Event Content Type" Inherits="TRUE" Version="0"><FieldRefs><FieldRef ID="{64cd368d-2f95-4bfc-a1f9-8d4324ecb007}" DisplayName="$Resources:core,Start_Date;" Name="StartDate" Format="DateOnly" Required="TRUE" /><FieldRef ID="{8A121252-85A9-443d-8217-A1B57020FADF}" DisplayName="$Resources:core,End_Date;" Name="_EndDate" Format="DateTime" Required="TRUE" /><FieldRef ID="{1fb2630a-be89-41ab-963d-8fd54c0945d8}" DisplayName="Event Description" Required="TRUE" Name="EventDescription" /></FieldRefs></ContentType></ContentTypes>
+    <Fields>
+      
+    <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" /><Field ID="{64cd368d-2f95-4bfc-a1f9-8d4324ecb007}" Name="StartDate" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="StartDate" Group="$Resources:core,Base_Columns;" Type="DateTime" Format="DateOnly" DisplayName="$Resources:core,Start_Date;" Required="TRUE"><Default>[today]</Default></Field><Field ID="{8A121252-85A9-443d-8217-A1B57020FADF}" Name="_EndDate" Group="$Resources:core,Base_Columns;" Type="DateTime" DisplayName="$Resources:core,End_Date;" Format="DateTime" SourceID="http://schemas.microsoft.com/sharepoint/v3/fields" StaticName="_EndDate" Required="TRUE"><Default>[today]</Default></Field><Field ID="{1fb2630a-be89-41ab-963d-8fd54c0945d8}" Name="EventDescription" DisplayName="Event Description" Type="Text" Required="TRUE" Group="Intranet"></Field></Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="All Events" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitle"></FieldRef><FieldRef Name="StartDate" /><FieldRef Name="_EndDate" /><FieldRef Name="EventDescription" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

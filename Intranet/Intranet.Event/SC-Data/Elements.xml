@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{1fb2630a-be89-41ab-963d-8fd54c0945d8}"
+       Name="EventDescription"
+       DisplayName="Event Description"
+       Type="Text"
+       Required="FALSE"
+       Group="Intranet">
+  </Field>
+</Elements>

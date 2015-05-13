@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x0100C17AC77914394C08A1FE602606BDA880" Name="CT-Event" Group="Intranet" Description="Event Content Type" Inherits="TRUE" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{64cd368d-2f95-4bfc-a1f9-8d4324ecb007}" DisplayName="Event Date" Name="StartDate" Format="DateOnly" Required="TRUE" />
+      <FieldRef ID="{1fb2630a-be89-41ab-963d-8fd54c0945d8}" DisplayName="Event Description" Required="TRUE" Name="EventDescription" />
+    </FieldRefs>
+  </ContentType>
+</Elements>
