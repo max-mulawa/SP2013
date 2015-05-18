@@ -45,6 +45,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.SharePoint" />
@@ -62,10 +63,10 @@
     </None>
     <None Include="key.snk" />
     <None Include="LI-Events\LI-EventsInstance\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{92bc343e-37a1-4110-a9b2-ca3ef300def6}</SharePointProjectItemId>
+      <SharePointProjectItemId>{b93808a3-9227-4bc8-b85c-f7279c91acfe}</SharePointProjectItemId>
     </None>
     <None Include="LI-Events\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{b62614d0-4b9c-4eb8-9e6f-2f2a365f6486}</SharePointProjectItemId>
+      <SharePointProjectItemId>{8294ec47-62bf-4d90-8db0-f67d61b1e7aa}</SharePointProjectItemId>
     </None>
     <None Include="Package\Package.package">
       <PackageId>{a56facb6-0f06-4ec9-a3e3-a794a3cf1673}</PackageId>
@@ -85,7 +86,9 @@
     <Content Include="LI-Events\Elements.xml" />
     <Content Include="LI-Events\LI-EventsInstance\Elements.xml" />
     <Content Include="LI-Events\Schema.xml" />
-    <Content Include="SC-Data\Elements.xml" />
+    <Content Include="SC-Data\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -41,19 +41,37 @@
     <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.SharePoint" />
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventsBySearchWebPart\EventsBySearchWebPart.cs" />
+    <Compile Include="EventsBySearchWebPart\EventsBySearchWebPartUserControl.ascx.cs">
+      <DependentUpon>EventsBySearchWebPartUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventsBySearchWebPart\EventsBySearchWebPartUserControl.ascx.designer.cs">
+      <DependentUpon>EventsBySearchWebPartUserControl.ascx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="EventsBySearchWebPart\EventsBySearchWebPart.webpart" />
+    <None Include="EventsBySearchWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bbe9d576-c95b-4f1c-9555-efcf31551c90}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{83f41705-29fb-4c94-a231-5ad1ff6de8be}</FeatureId>
+    </None>
     <None Include="key.snk" />
     <None Include="Package\Package.package">
       <PackageId>{8bfd6e86-7ee1-47d4-ac7c-20a05230d7be}</PackageId>
@@ -62,8 +80,13 @@
       <DependentUpon>Package.package</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Features\" />
+    <Content Include="EventsBySearchWebPart\Elements.xml" />
+    <Content Include="EventsBySearchWebPart\EventsBySearchWebPartUserControl.ascx" />
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

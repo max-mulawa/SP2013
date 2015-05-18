@@ -8,4 +8,12 @@
        Required="FALSE"
        Group="Intranet">
   </Field>
+  <Field
+       ID="{F1D11A42-ED15-4579-8B24-0D94DAF2030E}"
+       Name="EventDate"
+       DisplayName="Event Date"
+       Type="DateTime"
+       Required="FALSE"
+       Group="Intranet">
+  </Field>
 </Elements>

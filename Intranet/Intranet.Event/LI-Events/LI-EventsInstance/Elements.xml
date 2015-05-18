@@ -1,4 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-  <ListInstance Title="LI-Events" OnQuickLaunch="TRUE" TemplateType="100" Url="Lists/LI-Events" Description="Check list of Intranet Events "></ListInstance>
+  <ListInstance Title="Boxing Events" OnQuickLaunch="TRUE" TemplateType="100" Url="Lists/Events" Description="Events list"></ListInstance>
 </Elements>
