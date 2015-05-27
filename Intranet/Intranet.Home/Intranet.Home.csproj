@@ -41,6 +41,7 @@
     <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,6 +55,16 @@
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code\Event.cs" />
+    <Compile Include="EventsByCacheWebPart\EventsByCacheWebPart.cs" />
+    <Compile Include="EventsByCacheWebPart\EventsByCacheWebPartUserControl.ascx.cs">
+      <DependentUpon>EventsByCacheWebPartUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventsByCacheWebPart\EventsByCacheWebPartUserControl.ascx.designer.cs">
+      <DependentUpon>EventsByCacheWebPartUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\EventRepository.cs" />
     <Compile Include="EventsBySearchWebPart\EventsBySearchWebPart.cs" />
     <Compile Include="EventsBySearchWebPart\EventsBySearchWebPartUserControl.ascx.cs">
       <DependentUpon>EventsBySearchWebPartUserControl.ascx</DependentUpon>
@@ -65,11 +76,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="EventsByCacheWebPart\EventsByCacheWebPart.webpart" />
+    <None Include="EventsByCacheWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{da3aa92c-45b4-47d3-bfe1-348302961c8f}</SharePointProjectItemId>
+    </None>
     <None Include="EventsBySearchWebPart\EventsBySearchWebPart.webpart" />
     <None Include="EventsBySearchWebPart\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{bbe9d576-c95b-4f1c-9555-efcf31551c90}</SharePointProjectItemId>
     </None>
-    <None Include="Features\Feature1\Feature1.feature">
+    <None Include="Features\Site-Event\Site-Event.feature">
       <FeatureId>{83f41705-29fb-4c94-a231-5ad1ff6de8be}</FeatureId>
     </None>
     <None Include="key.snk" />
@@ -82,10 +97,12 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="EventsByCacheWebPart\Elements.xml" />
+    <Content Include="EventsByCacheWebPart\EventsByCacheWebPartUserControl.ascx" />
     <Content Include="EventsBySearchWebPart\Elements.xml" />
     <Content Include="EventsBySearchWebPart\EventsBySearchWebPartUserControl.ascx" />
-    <Content Include="Features\Feature1\Feature1.Template.xml">
-      <DependentUpon>Feature1.feature</DependentUpon>
+    <Content Include="Features\Site-Event\Site-Event.Template.xml">
+      <DependentUpon>Site-Event.feature</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
